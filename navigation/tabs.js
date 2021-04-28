@@ -5,6 +5,7 @@ import {
     TouchableOpacity,
     Text,
     StyleSheet
+
 } from "react-native";
 import { createBottomTabNavigator, BottomTabBar } from "@react-navigation/bottom-tabs"
 import LinearGradient from 'react-native-linear-gradient'
