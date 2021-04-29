@@ -14,9 +14,6 @@ const TransactionHistory = ({customContainerStyle, history}) => {
       onPress={()=>console.log(item)}
      >
        <Image
-        source={icons.transaction }
-       />
-       <Image
         source={icons.transaction}
         style={{
           width: 30,
