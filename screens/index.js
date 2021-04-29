@@ -7,11 +7,3 @@ export {
     CryptoDetail,
     Transaction
 };
-
-{/* <View
-    style={{
-        alignItems:'center'
-    }}
->
-
-</View> */}
