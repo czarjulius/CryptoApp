@@ -12,15 +12,72 @@ import {
 import {dummyData, COLORS, SIZES, FONTS, icons, images} from '../constants'
 
 const Home = ({ navigation }) => {
-    return (
-        <View style={styles.container}>
-            <Text>Home</Text>
-            <TouchableOpacity
-                onPress={() => navigation.navigate("CryptoDetail")}
+
+    function renderHeader() {
+        return(
+            <View
+                style={{
+                    width:"100%",
+                    height:290,
+                    ...styles.shadow
+                }}
             >
-                <Text>Navigate to CryptoDetail</Text>
-            </TouchableOpacity>
-        </View>
+                <ImageBackground
+                    source={images.banner}
+                    resizeMode='cover'
+                    style={{flex:1, alignItems:'center'}}
+                >
+                    <View
+                        style={{
+                            marginTop: SIZES.padding*2,
+                            width:"100%",
+                            alignItems:"flex-end",
+                            paddingHorizontal: SIZES.padding
+                        }}
+                    >
+                        <TouchableOpacity
+                            style={{
+                                width:35,
+                                height:35,
+                                alignItems:'center',
+                                justifyContent:'center'
+                            }}
+                            onPress={() => console.log("Notification on pressed")}
+                        >
+                            <Image
+                                source={icons.notification_white}
+                                resizeMode='contain'
+                                style={{flex:1}}
+                            />
+
+                        </TouchableOpacity>
+
+                    </View>
+                    <View
+                        style={{
+                            alignItems:'center',
+                            justifyContent:'center'
+                        }}
+                    >
+                        <Text style={{color: COLORS.white, ...FONTS.h3}}>Your Portfolio Balance</Text>
+                        <Text style={{ marginTop: SIZES.base, color: COLORS.white, ...FONTS.h3}}>${dummyData.portfolio.balance}</Text>
+                        <Text style={{color: COLORS.white, ...FONTS.body5}}>{dummyData.portfolio.changes} Last 24 hours</Text>
+
+                    </View>
+
+                </ImageBackground>
+
+            </View>
+        )
+    }
+
+
+    return (
+        <ScrollView>
+            <View style={{flex:1, paddingBottom:130}}>
+                {renderHeader()}
+            </View>
+        </ScrollView>
     )
 }
 
