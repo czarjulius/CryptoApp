@@ -3,19 +3,44 @@ import {
     StyleSheet,
     View,
     Text,
-    TouchableOpacity
+    TouchableOpacity,
+    SafeAreaView,
+    Image,
+    ScrollView,
+    Animated
 } from 'react-native';
 
+import {HeaderBar } from '../components'
+import {dummyData, COLORS, SIZES, FONTS, icons, images} from '../constants'
+
 const CryptoDetail = ({ navigation }) => {
+
+    function renderChart(){
+        return(
+            <View style={{
+                marginTop: SIZES.padding,
+                marginHorizontal:SIZES.radius,
+                
+            }}>
+
+            </View>
+        )
+    }
+
     return (
-        <View style={styles.container}>
-            <Text>CryptoDetail</Text>
-            <TouchableOpacity
-                onPress={() => navigation.navigate("Transaction")}
-            >
-                <Text>Navigate to Transaction</Text>
-            </TouchableOpacity>
-        </View>
+        <SafeAreaView
+            style={{
+                flex:1,
+                backgroundColor: COLORS.lightGray1
+            }}
+        >
+            <HeaderBar right={true}/>
+
+            <ScrollView>
+                <View style={{flex: 1, paddingBottom: SIZES.padding}}> {renderChart()} </View>
+            </ScrollView>
+
+        </SafeAreaView>
     )
 }
 
