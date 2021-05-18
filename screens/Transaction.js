@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 
 import {HeaderBar, CurrencyLabel, TextButton, TransactionHistory} from '../components'
-import {dummyData, COLORS, SIZES, FONTS} from '../constants'
+import {COLORS, SIZES, FONTS} from '../constants'
 
 const Transaction = ({ route }) => {
 
@@ -21,7 +21,7 @@ const Transaction = ({ route }) => {
 
     function renderTrade(){
         return(
-            <view
+            <View
                 style={{
                     marginTop: SIZES.padding,
                     marginHorizontal: SIZES.padding,
@@ -52,7 +52,7 @@ const Transaction = ({ route }) => {
                     onPress={()=>console.log("Trade")}
                 />
 
-            </view>
+            </View>
         )
     }
 

@@ -9,7 +9,8 @@ const TextButton = ({ label, customContainerStyle, customLabelStyle, onPress})=>
       style={{
         height: 45,
         alignItems: 'center',
-        justifyContent: SIZES.radius,
+        justifyContent: 'center',
+        borderRadius: SIZES.radius,
         backgroundColor: COLORS.green,
         ...customContainerStyle
       }}

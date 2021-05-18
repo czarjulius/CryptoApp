@@ -3,7 +3,6 @@ import {
     StyleSheet,
     View,
     Text,
-    TouchableOpacity,
     SafeAreaView,
     Image,
     ScrollView,
@@ -13,7 +12,7 @@ import { VictoryScatter, VictoryLine, VictoryChart, VictoryAxis } from 'victory-
 import {VictoryCustomTheme} from '../styles'
 
 import {HeaderBar, CurrencyLabel, TextButton, PriceAlert } from '../components'
-import {dummyData, COLORS, SIZES, FONTS} from '../constants'
+import {dummyData, COLORS, SIZES, FONTS, icons} from '../constants'
 
 const CryptoDetail = ({ route, navigation }) => {
 
@@ -95,7 +94,7 @@ const CryptoDetail = ({ route, navigation }) => {
                     marginTop: SIZES.padding,
                     paddingHorizontal: SIZES.padding
                 }}>
-                    <View style={{flex:1}}><CurrencyLabel icon={selectedCurrency?.image} currency={selectedCurrency.currency} code={selectedCurrency.code} /></View>
+                    <View style={{flex:1}}><CurrencyLabel icon={selectedCurrency?.image} currency={selectedCurrency?.currency} code={selectedCurrency?.code} /></View>
                     <View>
                         <Text style={{...FONTS.h3}}>${selectedCurrency?.image}</Text>
                         <Text style={{color: selectedCurrency?.type === "I" ? COLORS.green : COLORS.red, ...FONTS.body3}}>{selectedCurrency?.changes}</Text>
@@ -234,7 +233,7 @@ const CryptoDetail = ({ route, navigation }) => {
                             <Text style={{ textAlign: 'right', color: COLORS.gray, ...FONTS.body4}}>{selectedCurrency?.wallet.crypto} {selectedCurrency?.code}</Text>
                         </View>
                         <Image
-                            source={icon.right_arrow}
+                            source={icons.right_arrow}
                             resizeMode="cover"
                             style={{
                                 width:20,

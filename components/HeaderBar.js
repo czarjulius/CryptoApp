@@ -1,13 +1,12 @@
 import React from 'react';
 import {
-    StyleSheet,
     View,
     Text,
     TouchableOpacity,
     Image
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native'
-import {dummyData, COLORS, SIZES, FONTS, icons, images} from '../constants'
+import { COLORS, SIZES, FONTS, icons} from '../constants'
 
 const HeaderBar = ({right}) =>{
 

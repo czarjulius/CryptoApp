@@ -1,5 +1,5 @@
 import React from 'react'
-import {StyleSheet, View, Text, TouchableOpacity, Image, FlatList} from 'react-native'
+import {View, Text, TouchableOpacity, Image, FlatList} from 'react-native'
 import {COLORS, SIZES, FONTS, icons} from '../constants'
 
 const TransactionHistory = ({customContainerStyle, history}) => {

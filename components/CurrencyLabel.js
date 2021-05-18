@@ -1,9 +1,7 @@
 import React from 'react';
 import {
-    StyleSheet,
     View,
     Text,
-    TouchableOpacity,
     Image
 } from 'react-native';
 import {COLORS, SIZES, FONTS } from '../constants'
@@ -27,7 +25,7 @@ const CurrencyLabel = ({icon, currency, code}) =>{
         style={{marginLeft: SIZES.base}}
       >
         <Text style={{...FONTS.h3}}>{currency}</Text>
-        <Text style={{ color: COLORS.WebGLVertexArrayObject,...FONTS.body4}}>{code}</Text>
+        <Text style={{ color: COLORS.white,...FONTS.body4}}>{code}</Text>
 
       </View>
 
