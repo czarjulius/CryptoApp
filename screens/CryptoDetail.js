@@ -13,7 +13,7 @@ import { VictoryScatter, VictoryLine, VictoryChart, VictoryAxis } from 'victory-
 import {VictoryCustomTheme} from '../styles'
 
 import {HeaderBar, CurrencyLabel, TextButton, PriceAlert } from '../components'
-import {dummyData, COLORS, SIZES, FONTS, icons, images} from '../constants'
+import {dummyData, COLORS, SIZES, FONTS} from '../constants'
 
 const CryptoDetail = ({ route, navigation }) => {
 
